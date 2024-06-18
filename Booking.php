@@ -1,6 +1,6 @@
 <?php
 require_once('inc/connection.php');
-
+//1
 $uid=null;
 $selectedSlotes = null;
 if($_SERVER["REQUEST_METHOD"] == "GET" || $_SERVER["REQUEST_METHOD"] == "POST"){
@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET" || $_SERVER["REQUEST_METHOD"] == "POST"){
                     </div>
                     <div class="col">
                         <input class="d-flex justify-content-start form-control" type="text" name="vehical_number'.$slotId_temp.'"
-                            id="vehical_number'.$slotId_temp.'" placeholder="Enter your mobile number" required>
+                            id="vehical_number'.$slotId_temp.'" placeholder="Enter your vehicle number" required>
                     </div>
                 </div>
                 <div class="row mt-2">
@@ -149,7 +149,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET" || $_SERVER["REQUEST_METHOD"] == "POST"){
     </style>
 
 </head>
-
+<!-- 2 -->
 <body>
     <header class="red" style="background-color: rgb(20, 20, 20);">
         <div class="row">
@@ -252,8 +252,10 @@ if($_SERVER["REQUEST_METHOD"] == "GET" || $_SERVER["REQUEST_METHOD"] == "POST"){
         function logout() {
             window.location.href = "index.php";
         }
+
+        //after user filled the details this will execute
         var x = "<?php echo $selectedSlotes?>";
-        slotids = x.split(",").map(Number);
+        slotids = x.split(",").map(Number); //convert $selectedslots into a array
         var vehicaletype = []
         var in_date = []
         var out_date = []

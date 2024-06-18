@@ -137,6 +137,7 @@ $conn->close();
             }
             var selectedSlotId = [];
             function changeColor(card, slotid) {
+                //add and remove slot id to array
                 var index = selectedSlotId.indexOf(slotid);
                 if (index === -1) {
                     // If not in the array, add it
@@ -146,7 +147,8 @@ $conn->close();
                     selectedSlotId.splice(index, 1);
                 }
 
-                console.log(selectedSlotId);
+                // console.log(selectedSlotId);
+                // color changing
                 if (card.classList.contains('text-bg-secondary')) {
                     card.classList.remove('text-bg-secondary')
                     card.classList.add('text-bg-success')
